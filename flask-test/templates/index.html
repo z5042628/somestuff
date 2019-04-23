@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+	<title>Index page </title>
+	</head>
+	<body>
+		<h1> Details page </h1>
+	  
+		<Form method="POST">
+			{% if old_names %}
+			<input name="player_name" placeholder="Player 1" value={{old_names[0]}}>
+			<input name="player_name" placeholder="Player 2" value={{old_names[1]}}>
+			<br>
+			<input name="player_name" placeholder="Player 3" value={{old_names[2]}}>
+			<input name="player_name" placeholder="Player 4" value={{old_names[3]}}>
+			<br>
+			<input name="player_name" placeholder="Player 5" value={{old_names[4]}}>
+			<input name="player_name" placeholder="Player 6" value={{old_names[5]}}>
+			<br>
+			<input name="player_name" placeholder="Player 7" value={{old_names[6]}}>
+			<input name="player_name" placeholder="Player 8" value={{old_names[7]}}>
+			<br>
+			<input name="player_name" placeholder="Player 9" value={{old_names[8]}}>
+			<input name="player_name" placeholder="Player 10" value={{old_names[9]}}>
+			 
+			{% else %}
+			<input name="player_name" placeholder="Player 1"/>
+			<input name="player_name" placeholder="Player 2"/>
+			<br>
+			<input name="player_name" placeholder="Player 3"/>
+			<input name="player_name" placeholder="Player 4"/>
+			<br>
+			<input name="player_name" placeholder="Player 5"/>
+			<input name="player_name" placeholder="Player 6"/>
+			<br>
+			<input name="player_name" placeholder="Player 7"/>
+			<input name="player_name" placeholder="Player 8"/>
+			<br>
+			<input name="player_name" placeholder="Player 9"/>
+			<input name="player_name" placeholder="Player 10"/>
+			
+			{% endif %}
+			 
+			<button type="submit" name="bt">Say hi to me</button>
+			 
+			<br>
+			<br>
+			{% if team_1 and team_2%}
+				{{ team_1 }} 
+				<br>vs
+				<br>
+				{{ team_2 }}
+			{% else %}
+				Not enough players
+			{% endif %}
+		</Form>
+	</body>
+</html>
